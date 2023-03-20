@@ -1,7 +1,5 @@
 {
   "projects": {
-    "development": "freechat-be485"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "freechat-41cf8"
+  }
 }

@@ -1,16 +1,17 @@
 {
-    "hosting": {
-      "public": "build",
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
       "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
       ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
       ]
     }
-  }
+  ]
+}
